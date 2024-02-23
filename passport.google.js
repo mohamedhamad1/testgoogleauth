@@ -6,7 +6,7 @@ const User = require('./User')
 passport.use(new GoogleStrategy({
     clientID: GOOGLE_CLIENT_ID,
     clientSecret: GOOGLE_CLIENT_SECRET,
-    callbackURL: "http://localhost:4002/auth/google/callback",
+    callbackURL: "/auth/google/callback",
 },
     async(accessToken, refreshToken, profile, done) => {
         console.log('accToken:',accessToken, 'profile:',profile,'refreshToken',refreshToken);
